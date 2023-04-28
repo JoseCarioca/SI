@@ -1,0 +1,17 @@
+Para 30 ciudades, 20 individuos, 1000 iteraciones y muestra de 200
+media tiempo: 1.496833e
+media solucion: 169.9630
+Distancia media: 130.0370
+
+Para 5 ciudades, 30 individuos, 500 iteraciones y muestra de 200
+mejor solucion: 42.52130, distancia= 7.478703
+media tiempo: 0.8157454
+media solucion: 29.35015e
+Distancia media: 20.64985e
+
+7	3	5	13	4	12	14	2	8	9	1	11	10	15	6	110.089889759052
+Para 15 ciudades, 50 individuos, 1000 iteraciones y muestra de 2000
+mejor solucion: 1.100899e+02, distancia = 3.991011e+01 
+media tiempo: 3.595006e+00
+media solucion: 9.075132e+01
+Distancia media: 5.924868e+01

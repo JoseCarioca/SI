@@ -3,17 +3,17 @@
 %% inicializacion de variables
 s = rng(1);
 N=15;
-Pob=50;
+Pob=20;
 MAX_ITERACIONES=1000;
 TAM = 10;
 MAX_F = N*TAM;
-muestra = 2000; %conteo para hacer una media
+muestra = 100; %conteo para hacer una media
 %cordenadas x&y de las ciudades
 ciudades = TAM*rand(N,2);
 
 % si se quiere ver las ciudades:
 figure
-plot(ciudades(:,1),ciudades(:,2), '+-')
+plot(ciudades(:,1),ciudades(:,2), '+')
 
 
 %% AG
@@ -22,7 +22,7 @@ AvgSolution = 0;
 Tiempo = 0;
 AvgTime = 0; %media tiempo empleado
 for i=1:muestra
-    rng(i);
+    rng(i*5);
     tic;
     sol = TSP(ciudades,N,Pob,MAX_ITERACIONES);
     %[sol,itera,estancado] = pso(NReinas,NTableros,MAX_ITERACIONES);

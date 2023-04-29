@@ -1,5 +1,5 @@
 %% Tournament
-function solution = Tournament(F,x,k)
+function solution = Tournament(F,dist,MAX_F,x,k)
 %% F: fitness function
 %% parents: selected populations
 %% k: individuals fighting
@@ -11,7 +11,7 @@ solution = zeros(q/2,L*2); %already reshaped
 
 %% fitness calculation
 for i=1:q
-   fitness(i) = F(x(i,:)); 
+   fitness(i) = F(x(i,:),dist,MAX_F); 
 end
 %% perform tournament
 randnums = randi([1,q],q,k); %each row are competitors

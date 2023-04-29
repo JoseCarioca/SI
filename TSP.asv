@@ -43,11 +43,9 @@ while( maxAttempts > 0 ) %añadir mas condiciones
     for i=1:Pob/2
         assert(numel(unique(selected(i,1:N))) == N, 'roulette output not a perm1');
         assert(numel(unique(selected(i,N+1:end))) == N, 'roulette output not a perm2');
-        %x(2*i-1:2*i,:) = PMX2(reshape(selected(i,:), [N, 2])'); %nota: pmx keeps some conflicts nota2:not anymore
-
-        x(2*i-1:2*i,:) = OX2(reshape(selected(i,:), [N, 2])'); %nota: pmx keeps some conflicts nota2:not anymore
-        assert(numel(unique(x(2*i-1,:))) == N, 'X output not a perm1');
-        assert(numel(unique(x(2*i,:))) == N, 'X output not a perm2');
+        x(2*i-1:2*i,:) = PMX2(reshape(selected(i,:), [N, 2])'); %nota: pmx keeps some conflicts nota2:not anymore
+        assert(numel(unique(x(2*i-1,:))) == N, 'pmx output not a perm1');
+        assert(numel(unique(x(2*i,:))) == N, 'pmx output not a perm2');
     end
     %disp(x);
     %% mutation?
@@ -56,8 +54,7 @@ while( maxAttempts > 0 ) %añadir mas condiciones
     %% replacement
     %Generational (do nothing)
     %......%
-
-    % elite / comment this for generational replacement
+    % elite
     fitness = zeros(1,Pob*2);
     elite = vertcat(parents, x);
     for i=1:Pob*2
@@ -70,7 +67,6 @@ while( maxAttempts > 0 ) %añadir mas condiciones
     for i=i:Pob
         x(i,:) = elite(idx(i),:);
     end
-    %elite end
 
     %% stopping criteria
     %MaxAttempts DO NOTHING

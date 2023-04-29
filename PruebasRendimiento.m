@@ -3,11 +3,11 @@
 %% inicializacion de variables
 s = rng(1);
 N=15;
-Pob=20;
-MAX_ITERACIONES=1000;
+Pob=30;
+MAX_ITERACIONES=2000;
 TAM = 10;
 MAX_F = N*TAM;
-muestra = 100; %conteo para hacer una media
+muestra = 50; %conteo para hacer una media
 %cordenadas x&y de las ciudades
 ciudades = TAM*rand(N,2);
 
